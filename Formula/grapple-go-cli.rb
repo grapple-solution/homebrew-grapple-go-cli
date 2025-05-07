@@ -2,7 +2,7 @@ class GrappleGoCli < Formula
   desc "Command-line interface for Grapple"
   homepage "https://github.com/grapple-solution/grapple-go-cli"
 
-  url "https://github.com/grapple-solution/grapple-go-cli/archive/refs/tags/0.0.29.tar.gz"
+  url "https://github.com/grapple-solution/grapple-go-cli/archive/refs/tags/0.0.30.tar.gz"
 
   depends_on "go" => :build
 
@@ -13,6 +13,8 @@ class GrappleGoCli < Formula
     # Install additional required directories
     (share/"grapple-go-cli").install "template-files"
     (share/"grapple-go-cli").install "files"
+    # Install VERSION file
+    (share/"grapple-go-cli").install "VERSION"
   end
 
   def caveats
